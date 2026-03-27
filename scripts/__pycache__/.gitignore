@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+.venv/
+
+# Podaci — ne pushujemo sirove CSV fajlove
+data/raw/
+data/processed/
+
+# PowerBI — binarni fajl, opciono
+# powerbi/*.pbix
+
+# MySQL kredencijali
+scripts/utils.py
+
+# VS Code
+.vscode/
+
+# Windows
+Thumbs.db
+Desktop.ini
