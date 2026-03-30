@@ -23,7 +23,7 @@ from datetime import datetime, timedelta
 DB_CONFIG = {
     "host":     "localhost",
     "user":     "root",
-    "password": "admin",        # ← tvoja MySQL lozinka ovde
+    "password": "admin",       
     "database": "euroleague_db",
     "charset":  "utf8mb4"
 }
@@ -37,10 +37,10 @@ def get_connection():
     try:
         conn = mysql.connector.connect(**DB_CONFIG)
         if conn.is_connected():
-            print("✅ Konekcija sa bazom uspešna!")
+            print(" Konekcija sa bazom uspešna!")
             return conn
     except Error as e:
-        print(f"❌ Greška pri konekciji: {e}")
+        print(f" Greška pri konekciji: {e}")
         print("   Proveri lozinku u DB_CONFIG!")
         return None
 
