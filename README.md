@@ -6,7 +6,6 @@ End-to-end Data Analytics projekat baziran na 10 sezona Euroleague košarke (201
 - **Python 3.13** — ETL pipeline, data cleaning, ML model
 - **MySQL 8.0** — Star Schema Data Warehouse
 - **PowerBI** — Interaktivni report (4 stranice)
-- **scikit-learn** — Regression model za predvidjanje poena
 
 ## Arhitektura — Star Schema
 ```
@@ -28,8 +27,7 @@ fact_team_stats (180)       ── dim_player (752)
 ├── SQL/
 │   ├── create_tables.sql
 │   └── 02_add_fk_games.sql
-├── powerbi/
-│   └── euroleague_report.pbix
+│── euroleague_report.pbix
 └── requirements.txt
 ```
 
@@ -37,7 +35,7 @@ fact_team_stats (180)       ── dim_player (752)
 
 ### 1. Instaliraj dependencies
 ```bash
-pip install -r requirements.txt
+pip install -r requirements_euroleague_project.txt
 ```
 
 ### 2. Podesi MySQL konekciju
@@ -87,7 +85,7 @@ Regression model predvidja `home_score` na osnovu 25 featera.
 ## PowerBI Report
 
 Report sadrzi 4 stranice:
-1. **Overview** — KPI kartice, scoring trend, top timovi
-2. **Team Performance** — Scatter plot, bookmarks, Top N parametar
-3. **Player Performance** — PIR analiza (u razvoju)
-4. **Head-to-Head** — USERELATIONSHIP DAX (u razvoju)
+1. **Overview** 
+2. **Team Performance** 
+3. **Player Performance** 
+4. **Head-to-Head** 
